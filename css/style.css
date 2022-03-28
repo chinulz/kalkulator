@@ -103,7 +103,7 @@ h1 {
 }
 
 .kalkulator span:active {
-    filter: brighrness(1.5);
+    filter: brightness(1.5);
 }
 
 .kalkulator span i {
