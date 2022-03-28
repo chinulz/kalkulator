@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+/*font-family: 'Bebas Neue', cursive;*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 1px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #333;
+}
+
+h1 {
+    position: absolute;
+    top: 10%;
+    font-size: 50px;
+    letter-spacing: 20px;
+    background: #000000;
+	background: -webkit-linear-gradient(to bottom, #f2f2f2 0%, #f4f4f4 100%);
+	background: -moz-linear-gradient(to bottom, #f2f2f2 0%, #f4f4f4 100%);
+	background: linear-gradient(to bottom, #f2f2f2 0%, #f4f4f4 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	text-shadow: 0 0 30px #fff;
+	animation: gerak 3s ease-in-out infinite alternate;
+}
+@keyframes gerak {
+    0%{
+        transform: translateY(-50%);
+    }
+    100%{
+        transform: translateY(5%);
+    }
+}
+
+.container {
+    position: relative;
+    min-width: 300px;
+    min-height: 400px;
+    background: #333;
+    padding: 40px 30px 30px;
+    border-radius: 20px;
+    box-shadow: 25px 25px 75px #000, 10px 10px 70px #000;
+}
+
+.kalkulator {
+    position: relative;
+    display: grid;
+}
+
+.kalkulator .value {
+    position: relative;
+    grid-column: span 4;
+    height: 100px;
+    width: 100%;
+    border: none;
+    outline: none;
+    background: #999;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 3px #000;
+    text-align: right;
+    padding: 10px;
+    font-size: 2em;
+}
+
+.kalkulator span {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 80px;
+    height: 80px;
+    margin: 8px;
+    background: linear-gradient(#2f2f2f, #4f4f4f);
+    border: 2px solid #000;
+    border-radius: 10px;
+    box-shadow: 5px 10px 15px #000;
+    color: #fff;
+    user-select: none;
+    cursor: pointer;
+    font-weight: 400;
+}
+
+.kalkulator span::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 4px;
+    bottom: 10px;
+    right: 8px;
+    background: linear-gradient(92deg, #2d2d2d, #4d4d4d);
+    border-radius: 10px;
+    border-left: 1px solid #fff2;
+    border-top: 1px solid #fff2;
+    border-bottom: 1px solid #fff2;
+}
+
+.kalkulator span:active {
+    filter: brighrness(1.5);
+}
+
+.kalkulator span i {
+    position: relative;
+    font-style: normal;
+    font-size: 1.5em;
+    text-transform: uppercase;
+}
+
+.kalkulator .reset {
+    grid-column: span 2;
+    width: 170px;
+    background: #f00;
+}
+
+.kalkulator .reset::before {
+    background: linear-gradient(90deg, #d20000, #ffffff5c);
+    border-left: 1px solid #fff2;
+    border-top: 1px solid #fff2;
+    border-bottom: 1px solid #fff2;
+}
+
+.kalkulator .tambah {
+    grid-row: span 2;
+    height: 170px;
+}
+
+.kalkulator .smdgn {
+    background: #2196f3;
+}
+
+.kalkulator .smdgn::before {
+    background: linear-gradient(90deg, #2196f3, #ffffff5c);
+    border-left: 1px solid #fff2;
+    border-top: 1px solid #fff2;
+    border-bottom: 1px solid #fff2;
+}
+
+pre {
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%);
+  color: #fff;
+  font-size: 20px;
+}
