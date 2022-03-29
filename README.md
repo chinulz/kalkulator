@@ -1,2 +1,2 @@
 # kalkulator
-kalkulator html css javascript
+kalkulator using html css javascript
